@@ -13,8 +13,9 @@ Amazon sellers often struggle with:
 2. **Compliance Risks**: Avoiding prohibited words that trigger listing suppressions.
 3. **Data Silos**: No easy way to track how listing changes correlate with performance over time.
 
-### System Flow & Architecture
-The application is built on a modern, decoupled architecture designed for scale and reliability. You can view the full **[High-Level Sequence Diagram here](https://drive.google.com/file/d/1V1JbMinrITPxuDGlHybD5xxdad3HLAXY/view?usp=sharing)**.
+## Solution & Architecture
+
+The application is built on a modern, decoupled architecture designed for scale and reliability.
 
 ### Backend (Node.js & Express)
 - **Scraper Service**: Uses a headless multi-domain fallback strategy to bypass anti-bot measures and extract clean product data.
