@@ -2,6 +2,9 @@
 
 This document outlines the end-to-end technical flow of the Amazon Product Listing Optimizer, covering data extraction, AI optimization, and version control history.
 
+> [!TIP]
+> View the comprehensive **[High-Level Sequence Diagram on Google Drive](https://drive.google.com/file/d/1V1JbMinrITPxuDGlHybD5xxdad3HLAXY/view?usp=sharing)** for a visual walkthrough of the entire data pipeline.
+
 ## High-Level Flow Diagram
 
 ```mermaid
