@@ -1,0 +1,42 @@
+{
+    "version": 2,
+    "rewrites": [
+        {
+            "source": "/api/products/:asin",
+            "destination": "/api/products.js?asin=:asin"
+        },
+        {
+            "source": "/api/optimize",
+            "destination": "/api/optimize.js"
+        },
+        {
+            "source": "/api/history/save",
+            "destination": "/api/history-save.js"
+        },
+        {
+            "source": "/api/history/:asin",
+            "destination": "/api/history-get.js?asin=:asin"
+        },
+        {
+            "source": "/api/history/:asin/diff",
+            "destination": "/api/history-diff.js?asin=:asin"
+        },
+        {
+            "source": "/api/history/:asin/rollback",
+            "destination": "/api/history-rollback.js?asin=:asin"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/frontend/dist/$1"
+        }
+    ],
+    "functions": {
+        "api/optimize.js": {
+            "maxDuration": 60,
+            "memory": 1024
+        },
+        "api/products.js": {
+            "maxDuration": 30
+        }
+    }
+}

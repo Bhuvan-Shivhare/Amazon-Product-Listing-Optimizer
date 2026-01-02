@@ -1,17 +1,22 @@
 const mysql = require('mysql2/promise');
 
-// Create MySQL connection pool for better performance and scalability
+// Create MySQL connection pool with serverless-optimized settings
+const poolConfig = process.env.DATABASE_URL
+  ? { uri: process.env.DATABASE_URL }
+  : {
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3306,
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+  };
+
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || 3306,
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  connectionLimit: parseInt(process.env.DB_CONNECTION_LIMIT) || 10,
-  queueLimit: parseInt(process.env.DB_QUEUE_LIMIT) || 0,
+  ...poolConfig,
+  connectionLimit: 1, // Reduced for serverless cold-start efficiency
   enableKeepAlive: true,
-  keepAliveInitialDelay: 0,
-  waitForConnections: true
+  waitForConnections: true,
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: true } : undefined
 });
 
 /**
