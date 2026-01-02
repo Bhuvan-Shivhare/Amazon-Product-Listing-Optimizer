@@ -1,0 +1,4 @@
+// Placeholder for model files
+// Models define database schemas and table structures
+
+module.exports = {};

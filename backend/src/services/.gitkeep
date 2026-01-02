@@ -1,0 +1,4 @@
+// Placeholder for service files
+// Services contain business logic and external integrations
+
+module.exports = {};

@@ -1,0 +1,4 @@
+// Placeholder for controller files
+// Controllers handle request logic and orchestrate services
+
+module.exports = {};
