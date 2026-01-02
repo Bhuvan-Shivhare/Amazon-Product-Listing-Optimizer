@@ -1,5 +1,7 @@
 # Amazon Listing Optimizer AI
 
+[![Demo Video](https://img.shields.io/badge/🎥_Watch-Demo_Video-red?style=for-the-badge)](https://drive.google.com/file/d/1uYNS3S8sXq8_CLQxZodS127WeQyyVol9/view?usp=sharing)
+
 A production-grade SEO tool that leverages Agentic AI to transform Amazon product listings. Built with a focus on conversion optimization, search visibility, and professional version control.
 
 ## Overview
